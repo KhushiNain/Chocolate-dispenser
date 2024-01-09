@@ -14,7 +14,7 @@ var chocolates = [
   'pink',
   'blue',
   'red',
-  'silver',
+  'silver',   
   'crimson',
   'purple',
   'silver',
@@ -183,10 +183,12 @@ function noOfChocolates(chocolates){
 
 //Progression 6: Sort chocolates based on count in each color. Return array of colors
 function sortChocolateBasedOnCount(){
-  chocolates.sort();
-
-
-
+      const chocolateCounts = {};
+    chocolates.forEach((chocolate) => {
+      chocolateCounts[chocolate] = (chocolateCounts[chocolate] || 0) + 1;
+    });
+    const sortedChocolates = chocolates.sort((a, b) => chocolateCounts[b] - chocolateCounts[a]);
+    return sortedChocolates;
 }
 
 
