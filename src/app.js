@@ -182,7 +182,7 @@ function noOfChocolates(chocolates){
 }
 
 //Progression 6: Sort chocolates based on count in each color. Return array of colors
-function sortChocolateBasedOnCount(){
+function sortChocolateBasedOnCount(chocolates){
       const chocolateCounts = {};
     chocolates.forEach((chocolate) => {
       chocolateCounts[chocolate] = (chocolateCounts[chocolate] || 0) + 1;
